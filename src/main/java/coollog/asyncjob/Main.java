@@ -74,78 +74,7 @@ public class Main {
     waitForSomeTime();
     return true;
   }
-
-  private static void doWithFutures() {
-    /**
-     * Pull manifest (has list of manifestLayers)
-     *
-     * Load manifestLayers from cache
-     *
-     * Pull manifestLayers
-     *  dep Pull manifest
-     *  dep Load manifestLayers from cache
-     *
-     * Put manifestLayers in image
-     *  dep Pull manifestLayers
-     */
-
-    CompletableFuture<Boolean> setUp = CompletableFuture.supplyAsync(() -> {
-      waitForSomeTime();
-      return true;
-    });
-
-    CompletableFuture<List<Integer>> pullManifest = setUp.thenApplyAsync(voidVar -> {
-      waitForSomeTime();
-      return MANIFEST_LAYERS;
-    });
-
-    CompletableFuture<CompletableFuture<List<Integer>>> loadCachedLayers = CompletableFuture.supplyAsync(() -> {
-      waitForSomeTime();
-
-      List<CompletableFuture<Integer>> getLayerJobs = new ArrayList<>();
-
-      for (int layerId : CACHED_LAYERS) {
-        CompletableFuture<Integer> getLayer = CompletableFuture.supplyAsync(() -> {
-          waitForSomeTime();
-          return layerId;
-        });
-        getLayerJobs.add(getLayer);
-      }
-
-      CompletableFuture<Void> getLayerJobsAll = CompletableFuture.allOf(
-          getLayerJobs.toArray(new CompletableFuture[getLayerJobs.size()]));
-
-      return getLayerJobsAll.thenApplyAsync(voidObject ->
-          getLayerJobs
-              .stream()
-              .map(CompletableFuture::join)
-              .collect(Collectors.toList()));
-    });
-
-    CompletableFuture<CompletableFuture<List<Integer>>> pullLayers = CompletableFuture.supplyAsync(() -> {
-      List<Integer> manifestLayers = pullManifest.join();
-      CompletableFuture<List<Integer>> cachedLayersJob = loadCachedLayers.join();
-
-      return cachedLayersJob.thenApplyAsync(cachedLayers -> {
-        waitForSomeTime();
-
-        return manifestLayers
-            .stream()
-            .filter(layer -> !cachedLayers.contains(layer))
-            .collect(Collectors.toList());
-      });
-    });
-
-
-    CompletableFuture<CompletableFuture<Void>> printLayers =
-        pullLayers.thenApplyAsync(pullLayersJob ->
-            pullLayersJob.thenAcceptAsync(layers -> {
-              layers.forEach(System.out::println);
-            }));
-
-    printLayers.join().join();
-  }
-
+  
   private static void waitForSomeTime() {
     try {
       TimeUnit.SECONDS.sleep((long) (Math.random() * 2));

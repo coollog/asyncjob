@@ -10,7 +10,7 @@ public class AsyncAsyncJob<T, R> extends AsyncJob<AsyncJob<R>> {
   private final Function<T, R> fn;
 
   /** A dependency to first join and then apply. */
-  private CompletableFuture<AsyncJob<T>> dependencyJob;
+  private CompletableFuture<AsyncJob<T>> dependencyFuture;
 
   AsyncAsyncJob(Function<T, R> fn) {
     this.fn = fn;
@@ -21,20 +21,20 @@ public class AsyncAsyncJob<T, R> extends AsyncJob<AsyncJob<R>> {
   }
 
   AsyncAsyncJob<T, R> applyToJob(SyncAsyncJob<AsyncJob<T>> other) throws Exception {
-    if (dependencyJob != null) {
+    if (dependencyFuture != null) {
       throw new Exception("Cannot apply to two wrapped jobs.");
     }
     dependsOn(other);
-    dependencyJob = other.getFuture();
+    dependencyFuture = other.getFuture();
     return this;
   }
 
   AsyncAsyncJob<T, R> applyToJob(AsyncAsyncJob<?, T> other) throws Exception {
-    if (dependencyJob != null) {
+    if (dependencyFuture != null) {
       throw new Exception("Cannot apply to two wrapped jobs.");
     }
     dependsOn(other);
-    dependencyJob = other.getFuture();
+    dependencyFuture = other.getFuture();
     return this;
   }
 
@@ -44,15 +44,15 @@ public class AsyncAsyncJob<T, R> extends AsyncJob<AsyncJob<R>> {
 
   /** Wrap a dependency job that returns a future. */
   protected Supplier<AsyncJob<R>> wrapSupplier() throws Exception {
-    if (dependencyJob == null) {
+    if (dependencyFuture == null) {
       throw new Exception("Must call applyToJob on AsyncAsyncJob");
     }
 
     return () -> {
-      AsyncJob<T> dependencyFuture = dependencyJob.join();
+      AsyncJob<T> dependencyJob = dependencyFuture.join();
       AsyncJob<R> newJob = new SyncAsyncJob<>(() ->
-          fn.apply((T) AsyncJob.getResultFor(dependencyFuture)));
-      return newJob.dependsOn(dependencyFuture);
+          fn.apply((T) AsyncJob.getResultFor(dependencyJob)));
+      return newJob.dependsOn(dependencyJob);
     };
   }
 }

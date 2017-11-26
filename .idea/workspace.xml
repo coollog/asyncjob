@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="530bc8c8-ce98-411f-bcf6-29544108e0ad" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0.2/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0.2/fileHashes/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0.2/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0.2/fileHashes/fileHashes.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0.2/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.0.2/taskHistory/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0.2/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0.2/taskHistory/taskHistory.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0.2/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.0.2/taskHistory/taskHistory.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/coollog/asyncjob/AsyncAsyncJob.java" afterPath="$PROJECT_DIR$/src/main/java/coollog/asyncjob/AsyncAsyncJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/coollog/asyncjob/AsyncJob.java" afterPath="$PROJECT_DIR$/src/main/java/coollog/asyncjob/AsyncJob.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/coollog/asyncjob/Main.java" afterPath="$PROJECT_DIR$/src/main/java/coollog/asyncjob/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/coollog/asyncjob/SyncAsyncJob.java" afterPath="$PROJECT_DIR$/src/main/java/coollog/asyncjob/SyncAsyncJob.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -29,11 +33,11 @@
         <splitter split-orientation="horizontal" split-proportion="0.5">
           <split-first>
             <leaf>
-              <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+              <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob/Main.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="86">
-                      <caret line="128" column="44" lean-forward="false" selection-start-line="128" selection-start-column="44" selection-end-line="128" selection-end-column="44" />
+                    <state relative-caret-position="128">
+                      <caret line="75" column="3" lean-forward="false" selection-start-line="75" selection-start-column="3" selection-end-line="75" selection-end-column="3" />
                       <folding>
                         <element signature="imports" expanded="true" />
                       </folding>
@@ -41,7 +45,7 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="AsyncJob.java" pinned="false" current-in-tab="true">
+              <file leaf-file-name="AsyncJob.java" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob/AsyncJob.java">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="-95">
@@ -60,8 +64,8 @@
               <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob/Main.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="217">
-                      <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
+                    <state relative-caret-position="767">
+                      <caret line="76" column="2" lean-forward="false" selection-start-line="76" selection-start-column="2" selection-end-line="76" selection-end-column="2" />
                       <folding>
                         <element signature="imports" expanded="true" />
                       </folding>
@@ -100,14 +104,14 @@
               <file leaf-file-name="AsyncAsyncJob.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob/AsyncAsyncJob.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="199">
-                      <caret line="53" column="56" lean-forward="false" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+                    <state relative-caret-position="585">
+                      <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
                       <folding>
                         <element signature="imports" expanded="true" />
-                        <element signature="e#461#462#0" expanded="true" />
-                        <element signature="e#483#484#0" expanded="true" />
-                        <element signature="e#499#500#0" expanded="true" />
-                        <element signature="e#533#534#0" expanded="true" />
+                        <element signature="e#464#465#0" expanded="true" />
+                        <element signature="e#486#487#0" expanded="true" />
+                        <element signature="e#502#503#0" expanded="true" />
+                        <element signature="e#536#537#0" expanded="true" />
                       </folding>
                     </state>
                   </provider>
@@ -435,8 +439,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob/SyncAsyncJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob/AsyncJob.java" />
-        <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob/AsyncAsyncJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob/Main.java" />
       </list>
     </option>
   </component>
@@ -754,22 +758,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob/AsyncAsyncJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="53" column="56" lean-forward="false" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+        <state relative-caret-position="585">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
+        <state relative-caret-position="767">
+          <caret line="76" column="2" lean-forward="false" selection-start-line="76" selection-start-column="2" selection-end-line="76" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
