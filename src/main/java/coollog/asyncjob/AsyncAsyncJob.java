@@ -4,43 +4,55 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-/** A job that depends on another job that returned a CompletableFuture. */
-public class AsyncAsyncJob<T, R> extends AsyncJob<CompletableFuture<R>> {
+/** A job that depends on another job that returned an AsyncJob. */
+public class AsyncAsyncJob<T, R> extends AsyncJob<AsyncJob<R>> {
 
   private final Function<T, R> fn;
 
-  /** A dependency ot first join and then apply. */
-  private SyncAsyncJob<CompletableFuture<T>> wrappedDependency;
+  /** A dependency to first join and then apply. */
+  private CompletableFuture<AsyncJob<T>> dependencyJob;
 
   AsyncAsyncJob(Function<T, R> fn) {
     this.fn = fn;
   }
 
   void run() {
-    getFuture().join().join();
+    getFuture().join().run();
   }
 
-  void applyToJob(SyncAsyncJob<CompletableFuture<T>> other) throws Exception {
-    if (wrappedDependency != null) {
+  AsyncAsyncJob<T, R> applyToJob(SyncAsyncJob<AsyncJob<T>> other) throws Exception {
+    if (dependencyJob != null) {
       throw new Exception("Cannot apply to two wrapped jobs.");
     }
     dependsOn(other);
-    wrappedDependency = other;
+    dependencyJob = other.getFuture();
+    return this;
   }
 
-  protected Supplier<CompletableFuture<R>> getSupplier() throws Exception {
+  AsyncAsyncJob<T, R> applyToJob(AsyncAsyncJob<?, T> other) throws Exception {
+    if (dependencyJob != null) {
+      throw new Exception("Cannot apply to two wrapped jobs.");
+    }
+    dependsOn(other);
+    dependencyJob = other.getFuture();
+    return this;
+  }
+
+  protected Supplier<AsyncJob<R>> getSupplier() throws Exception {
     throw new Exception("Must call applyToJob on AsyncAsyncJob");
   }
 
   /** Wrap a dependency job that returns a future. */
-  protected Supplier<CompletableFuture<R>> wrapSupplier() throws Exception {
-    if (wrappedDependency == null) {
+  protected Supplier<AsyncJob<R>> wrapSupplier() throws Exception {
+    if (dependencyJob == null) {
       throw new Exception("Must call applyToJob on AsyncAsyncJob");
     }
 
     return () -> {
-      CompletableFuture<T> dependencyFuture = wrappedDependency.getFuture().join();
-      return dependencyFuture.thenApplyAsync(fn);
+      AsyncJob<T> dependencyFuture = dependencyJob.join();
+      AsyncJob<R> newJob = new SyncAsyncJob<>(() ->
+          fn.apply((T) AsyncJob.getResultFor(dependencyFuture)));
+      return newJob.dependsOn(dependencyFuture);
     };
   }
 }

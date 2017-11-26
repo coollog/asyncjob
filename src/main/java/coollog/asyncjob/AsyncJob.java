@@ -22,9 +22,15 @@ abstract class AsyncJob<T> {
   private CompletableFuture<T> future;
 
 
-  final void dependsOn(AsyncJob<?> other) {
+  final AsyncJob<T> dependsOn(AsyncJob<?> other) {
     onlyDependency = other;
     dependencies.add(other);
+    return this;
+  }
+
+  final <U> AsyncJob<T> dependsOn(List<AsyncJob<U>> others) {
+    dependencies.addAll(others);
+    return this;
   }
 
   void run() {

@@ -38,40 +38,36 @@ public class Main {
     });
     pullManifestJob.dependsOn(setUpJob);
 
-    SyncAsyncJob<CompletableFuture<List<Integer>>> loadCachedLayersJob = new SyncAsyncJob<>(() -> {
+    SyncAsyncJob<AsyncJob<List<Integer>>> loadCachedLayersJob = new SyncAsyncJob<>(() -> {
       waitForSomeTime();
 
-      List<CompletableFuture<Integer>> getLayerJobs = new ArrayList<>();
-
-      for (int layerId : CACHED_LAYERS) {
-        CompletableFuture<Integer> getLayer = CompletableFuture.supplyAsync(() -> {
-          waitForSomeTime();
-          return layerId;
-        });
-        getLayerJobs.add(getLayer);
-      }
-
-      CompletableFuture<Void> getLayerJobsAll = CompletableFuture.allOf(
-          getLayerJobs.toArray(new CompletableFuture[getLayerJobs.size()]));
-
-      return getLayerJobsAll.thenApplyAsync(voidObject ->
-          getLayerJobs
-              .stream()
-              .map(CompletableFuture::join)
-              .collect(Collectors.toList()));
+      return SyncAsyncJob.newCollectJobFromList(CACHED_LAYERS, layerId -> () -> {
+        waitForSomeTime();
+        return layerId;
+      }, Integer.class);
     });
 
-    AsyncAsyncJob<List<Integer>, Integer> printLoadedCache = new AsyncAsyncJob<>(layers -> {
-      for (int layer : layers) {
+    AsyncAsyncJob<List<Integer>, List<Integer>> pullLayersJob = new AsyncAsyncJob<>(cachedLayers -> {
+      List<Integer> manifestLayers = (List<Integer>) AsyncJob.getResultFor(pullManifestJob);
+
+      waitForSomeTime();
+
+      return manifestLayers
+          .stream()
+          .filter(layer -> !cachedLayers.contains(layer))
+          .collect(Collectors.toList());
+    });
+    pullLayersJob.applyToJob(loadCachedLayersJob).dependsOn(pullManifestJob);
+
+    AsyncAsyncJob<List<Integer>, Integer> printPulledLayersJob = new AsyncAsyncJob<>(layers -> {
+      layers.forEach(layer -> {
         System.out.println("LAYER " + layer);
-      }
+      });
       return 0;
     });
-    printLoadedCache.applyToJob(loadCachedLayersJob);
+    printPulledLayersJob.applyToJob(pullLayersJob);
 
-    pullManifestJob.run();
-
-    printLoadedCache.run();
+    printPulledLayersJob.run();
   }
 
   private static boolean someFunction() {
