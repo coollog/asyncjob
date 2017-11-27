@@ -32,7 +32,7 @@ public class Main {
     SyncAsyncJob<List<Integer>> pullManifestJob = new SyncAsyncJob<>(() -> {
       waitForSomeTime();
 
-      System.out.println("SETUP JOB: " + AsyncJob.getResultFor(setUpJob));
+      System.out.println("SETUP JOB: " + setUpJob.getResult());
 
       return MANIFEST_LAYERS;
     });
@@ -48,7 +48,7 @@ public class Main {
     });
 
     AsyncAsyncJob<List<Integer>, List<Integer>> pullLayersJob = new AsyncAsyncJob<>(cachedLayers -> {
-      List<Integer> manifestLayers = (List<Integer>) AsyncJob.getResultFor(pullManifestJob);
+      List<Integer> manifestLayers = pullManifestJob.getResult();
 
       waitForSomeTime();
 
@@ -74,7 +74,7 @@ public class Main {
     waitForSomeTime();
     return true;
   }
-  
+
   private static void waitForSomeTime() {
     try {
       TimeUnit.SECONDS.sleep((long) (Math.random() * 2));

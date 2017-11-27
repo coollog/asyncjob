@@ -24,7 +24,7 @@ public class SyncAsyncJob<T> extends AsyncJob<T> {
     SyncAsyncJob<List<U>> collectJob = new SyncAsyncJob<>(() ->
         dependencies
             .stream()
-            .map(AsyncJob::getResultFor)
+            .map(AsyncJob::getResult)
             .map(classOfU::cast)
             .collect(Collectors.toList()));
     collectJob.dependsOn(dependencies);

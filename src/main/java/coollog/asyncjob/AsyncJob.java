@@ -8,11 +8,8 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 abstract class AsyncJob<T> {
-  private static final Map<AsyncJob<?>, Object> resultMap = new ConcurrentHashMap<>();
-
-  static Object getResultFor(AsyncJob<?> target) {
-    return resultMap.get(target);
-  }
+  /** A set of completed jobs. */
+  private static final Set<AsyncJob<?>> completed = ConcurrentHashMap.newKeySet();
 
   private final Set<AsyncJob<?>> dependencies = new HashSet<>();
 
@@ -21,7 +18,20 @@ abstract class AsyncJob<T> {
 
   private CompletableFuture<T> future;
 
+  /** Save the result once obtained. */
+  private T result;
 
+  final T getResult() {
+//    if (!completed.contains(this)) {
+//      throw new Exception("Trying to get result of uncompleted job. " +
+//          "Make sure to set dependencies correctly.");
+//    }
+
+    return result;
+  }
+
+  // TODO: Staticly define dependencies to make sure getting dependency results
+  //       is checked at compile time.
   final AsyncJob<T> dependsOn(AsyncJob<?> other) {
     onlyDependency = other;
     dependencies.add(other);
@@ -73,6 +83,7 @@ abstract class AsyncJob<T> {
     return future;
   }
 
+  // TODO: Replace Supplier with Runnable.
   protected abstract Supplier<T> getSupplier() throws Exception;
 
   protected Supplier<T> wrapSupplier() throws Exception {
@@ -82,8 +93,8 @@ abstract class AsyncJob<T> {
   final protected Supplier<T> wrapMySupplier() {
     return () -> {
       try {
-        T result = getSupplier().get();
-        resultMap.put(this, result);
+        result = getSupplier().get();
+        completed.add(this);
         return result;
       } catch (Exception ex) {
         throw new CompletionException(ex);

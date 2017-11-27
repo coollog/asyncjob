@@ -1,6 +1,8 @@
 package coollog.asyncjob;
 
+import javax.annotation.processing.Completion;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -50,8 +52,7 @@ public class AsyncAsyncJob<T, R> extends AsyncJob<AsyncJob<R>> {
 
     return () -> {
       AsyncJob<T> dependencyJob = dependencyFuture.join();
-      AsyncJob<R> newJob = new SyncAsyncJob<>(() ->
-          fn.apply((T) AsyncJob.getResultFor(dependencyJob)));
+      AsyncJob<R> newJob = new SyncAsyncJob<>(() -> fn.apply(dependencyJob.getResult()));
       return newJob.dependsOn(dependencyJob);
     };
   }
