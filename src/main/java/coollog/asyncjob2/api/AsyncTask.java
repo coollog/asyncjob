@@ -15,7 +15,7 @@ public abstract class AsyncTask<T> implements Task<T> {
   /** The result of running the task. */
   private T result;
 
-  /** Runs the task synchronously. */
+  /** Runs the task to completion. */
   @Override
   public void run() {
     // Runs the future and ignores the result.

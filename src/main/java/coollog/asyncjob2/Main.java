@@ -30,5 +30,7 @@ public class Main {
 
     pullManifestTask.run();
     pullManifestTask.getResult().forEach(System.out::println);
+
+    // TODO: Add the other tasks too.
   }
 }

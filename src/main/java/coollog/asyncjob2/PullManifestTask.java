@@ -7,7 +7,7 @@ import java.util.List;
 
 public class PullManifestTask extends SingleAsyncTask<List<Integer>> {
 
-  protected PullManifestTask(List<AsyncTask<?>> dependencies) {
+  public PullManifestTask(List<AsyncTask<?>> dependencies) {
     super(dependencies);
   }
 

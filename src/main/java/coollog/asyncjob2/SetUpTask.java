@@ -8,7 +8,7 @@ import java.util.List;
 
 public class SetUpTask extends SingleAsyncTask<Void> {
 
-  protected SetUpTask(List<AsyncTask<?>> dependencies) {
+  public SetUpTask(List<AsyncTask<?>> dependencies) {
     super(dependencies);
   }
 

@@ -35,7 +35,7 @@ public abstract class PromisedAsyncTask<T, R>
     AsyncTask<T> dependencyTask = dependency.getResult();
 
     // Creates a new task that applies the function to the result of the created task.
-    SingleAsyncTask<R> newTask = new ApplyFunctionAsyncTask(dependencyTask);
+    AsyncTask<R> newTask = new ApplyFunctionAsyncTask(dependencyTask);
 
     setResult(newTask);
   }

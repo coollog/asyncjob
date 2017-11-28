@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="530bc8c8-ce98-411f-bcf6-29544108e0ad" name="Default" comment="" />
+    <list default="true" id="530bc8c8-ce98-411f-bcf6-29544108e0ad" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/Main.java" afterPath="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/PullManifestTask.java" afterPath="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/PullManifestTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/SetUpTask.java" afterPath="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/SetUpTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/AsyncTask.java" afterPath="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/AsyncTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/PromisedAsyncTask.java" afterPath="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/PromisedAsyncTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/SingleAsyncTask.java" afterPath="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/SingleAsyncTask.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -47,8 +54,8 @@
               <file leaf-file-name="AsyncTask.java" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/AsyncTask.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="177">
-                      <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+                    <state relative-caret-position="193">
+                      <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
                       <folding>
                         <element signature="imports" expanded="true" />
                         <element signature="e#769#770#0" expanded="true" />
@@ -64,34 +71,32 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="SingleAsyncTask.java" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/SingleAsyncTask.java">
+              <file leaf-file-name="DependencySet.java" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/DependencySet.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="105">
-                      <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="50" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="PromisedAsyncTask.java" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/PromisedAsyncTask.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="266">
-                      <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="19" />
+                    <state relative-caret-position="-11">
+                      <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
                       <folding>
                         <element signature="imports" expanded="true" />
-                        <element signature="e#1645#1646#0" expanded="true" />
-                        <element signature="e#1702#1703#0" expanded="true" />
                       </folding>
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="AsyncTaskBuilder.java" pinned="false" current-in-tab="false">
+              <file leaf-file-name="SingleAsyncTask.java" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/SingleAsyncTask.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="195">
+                      <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="AsyncTaskBuilder.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/AsyncTaskBuilder.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="91">
+                    <state relative-caret-position="130">
                       <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
                       <folding>
                         <element signature="imports" expanded="true" />
@@ -100,27 +105,13 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+              <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/Main.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="293">
-                      <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                    <state relative-caret-position="218">
+                      <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
                       <folding>
                         <element signature="imports" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="SetUpTask.java" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/SetUpTask.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="263">
-                      <caret line="19" column="62" lean-forward="false" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
-                      <folding>
-                        <element signature="imports" expanded="true" />
-                        <element signature="e#275#276#0" expanded="true" />
-                        <element signature="e#304#305#0" expanded="true" />
                       </folding>
                     </state>
                   </provider>
@@ -133,7 +124,7 @@
               <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob/Main.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="234">
+                    <state relative-caret-position="-180">
                       <caret line="28" column="2" lean-forward="false" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
                       <folding>
                         <element signature="imports" expanded="true" />
@@ -162,27 +153,29 @@
         <splitter split-orientation="horizontal" split-proportion="0.5">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="SyncAsyncJob.java" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob/SyncAsyncJob.java">
+              <file leaf-file-name="PullManifestTask.java" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/PullManifestTask.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="375">
-                      <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+                    <state relative-caret-position="135">
+                      <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
                       <folding>
                         <element signature="imports" expanded="true" />
+                        <element signature="e#270#271#0" expanded="true" />
+                        <element signature="e#299#300#0" expanded="true" />
                       </folding>
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="PullManifestTask.java" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/PullManifestTask.java">
+              <file leaf-file-name="SetUpTask.java" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/SetUpTask.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="165">
-                      <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+                    <state relative-caret-position="135">
+                      <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
                       <folding>
                         <element signature="imports" expanded="true" />
-                        <element signature="e#273#274#0" expanded="true" />
-                        <element signature="e#302#303#0" expanded="true" />
+                        <element signature="e#272#273#0" expanded="true" />
+                        <element signature="e#301#302#0" expanded="true" />
                       </folding>
                     </state>
                   </provider>
@@ -191,12 +184,12 @@
             </leaf>
           </split-first>
           <split-second>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="AsyncAsyncJob.java" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob/AsyncAsyncJob.java">
+            <leaf>
+              <file leaf-file-name="PromisedAsyncTask.java" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/PromisedAsyncTask.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="158">
-                      <caret line="52" column="4" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
+                    <state relative-caret-position="167">
+                      <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
                       <folding>
                         <element signature="imports" expanded="true" />
                       </folding>
@@ -223,6 +216,7 @@
       <find>function&lt;</find>
       <find>wrapMySupplier</find>
       <find>asyncasyn</find>
+      <find>DependencySet</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -526,11 +520,11 @@
         <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/Task.java" />
         <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/AsyncTaskBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/SingleAsyncTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/PullManifestTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/SetUpTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/AsyncTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/PromisedAsyncTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/PullManifestTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/SetUpTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/coollog/asyncjob2/Main.java" />
       </list>
     </option>
   </component>
@@ -912,16 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob/SyncAsyncJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/concurrent/CompletableFuture.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -975,30 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob/AsyncAsyncJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="52" column="4" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/DependencySet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#512#513#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#562#563#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/AsyncTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1031,10 +991,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/AsyncTaskBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob/SyncAsyncJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        <state relative-caret-position="150">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/PullManifestTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob/AsyncAsyncJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="57" column="3" lean-forward="true" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/SingleAsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/DependencySet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1043,8 +1043,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/AsyncTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+        <state relative-caret-position="193">
+          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#769#770#0" expanded="true" />
@@ -1059,34 +1059,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/PromisedAsyncTask.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="19" />
+        <state relative-caret-position="218">
+          <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1645#1646#0" expanded="true" />
-            <element signature="e#1702#1703#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/SingleAsyncTask.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/SetUpTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="50" />
-          <folding />
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/PullManifestTask.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/PromisedAsyncTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        <state relative-caret-position="167">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#273#274#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1099,22 +1099,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/SetUpTask.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/api/AsyncTaskBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="19" column="62" lean-forward="false" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/coollog/asyncjob2/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="130">
+          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
