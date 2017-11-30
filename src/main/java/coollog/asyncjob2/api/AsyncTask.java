@@ -42,7 +42,8 @@ public abstract class AsyncTask<T> implements Task<T> {
     dependencies.add(dependency);
   }
 
-  protected CompletableFuture<Void> getFuture() {
+  // @VisibleForTesting
+  CompletableFuture<Void> getFuture() {
     if (future == null) {
       makeFutureFromDependencies();
     }
